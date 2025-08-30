@@ -1,74 +1,88 @@
 # Bastián Parraguez y Diego Carrasco
 
-# 📱 Juego de Reacción
+# 🎮 Juego de Reacción
+
+Un mini juego casual para entrenar reflejos y competir contra ti mismo.  
+El reto es **tocar la pantalla lo más rápido posible** cuando cambie de color. ⚡
 
 ---
 
 ## 📌 Preguntas obligatorias (responde todas en tu post)
 
-### 1.- Nombre de la App  
-**R.** Juego de Reacción  
+---
+
+### 1️⃣ Nombre de la App  
+✅ **Juego de Reacción**  
 
 ---
 
-### 2.- Propósito y problema que resuelve  
-**R.**  
-- **¿Para quién?** Personas que buscan entretenimiento rápido y sencillo, tipo juego casual.  
-- **¿Qué aporta?** Diversión breve y reto personal (competir con uno mismo o amigos). Entrena reflejos y rapidez mental.  
+### 2️⃣ Propósito y problema que resuelve  
+👥 **¿Para quién?**  
+- Personas que buscan entretenimiento rápido y sencillo, tipo juego casual.  
+
+✨ **¿Qué aporta?**  
+- Diversión breve y reto personal (competir con uno mismo o amigos).  
+- Entrena reflejos y rapidez mental.  
 
 ---
 
-### 3.- Pantallas iniciales (Activities)  
-**R.**  
-- **Pantalla de Inicio**: Botón para empezar a jugar y ver puntajes anteriores.  
-- **Pantalla de Juego**: Fondo cambia de color en un tiempo aleatorio → el usuario debe tocar rápido.  
-- **Pantalla de Resultados**: Muestra el tiempo de reacción y ranking de mejores tiempos.  
+### 3️⃣ Pantallas iniciales (Activities)  
+📲 **Listado de pantallas:**  
+1. **Pantalla de Inicio** → Botón para empezar a jugar y ver puntajes anteriores.  
+2. **Pantalla de Juego** → Fondo cambia de color en un tiempo aleatorio → el usuario debe tocar rápido.  
+3. **Pantalla de Resultados** → Muestra el tiempo de reacción y ranking de mejores tiempos.  
 
 ---
 
-### 4.- Navegación entre pantallas  
-**R.**  
+### 4️⃣ Navegación entre pantallas  
+🔗 **Flujo de navegación:**  
+
 - **MainActivity → JuegoActivity**  
   - Intent explícito.  
 
 - **JuegoActivity → ResultadoActivity**  
-  - Intent explícito con **Extras**: tiempo de reacción obtenido (`"reactionTime"`).  
+  - Intent explícito con **Extras** → `"reactionTime"`.  
 
 - **ResultadoActivity → MainActivity**  
-  - Intent explícito para volver al menú.  
+  - Intent explícito → regresar al menú principal.  
 
 ---
 
-### 5.- Componentes de Android que se prevén usar  
-**R.**  
-- **Activities**: Para cada pantalla (Inicio, Juego, Resultados).  
-- **Intents**: Navegación entre Activities y paso de datos (tiempo de reacción).  
-- **SharedPreferences**: Guardar mejores tiempos del jugador (fuente de datos interna).  
-- **View Components**: Buttons, TextViews, Layout con cambio dinámico de color.  
-- **Handler/Timer**: Para manejar el retardo aleatorio antes de que cambie el color.  
+### 5️⃣ Componentes de Android que se prevén usar  
+🛠️ **Listado de componentes:**  
+- **Activities** → Inicio, Juego y Resultados.  
+- **Intents** → Para navegar entre pantallas y pasar datos.  
+- **SharedPreferences** → Guardar mejores tiempos del jugador (persistencia local).  
+- **View Components** → Buttons, TextViews, Layout con color dinámico.  
+- **Handler / Timer** → Control del retardo aleatorio antes de cambiar color.  
 
 ---
 
-### 6.- Datos  
-**R.**  
+### 6️⃣ Datos  
+📂 **Datos que manejará la app:**  
 - Últimos tiempos de reacción.  
 - Mejor tiempo histórico.  
-- **Fuente**: `SharedPreferences` (persistencia básica en el dispositivo).  
+- **Fuente:** `SharedPreferences` (almacenamiento interno del dispositivo).  
 
 ---
 
-### 7.- Riesgos o desafíos iniciales  
-**R.**  
-1. Manejo del tiempo aleatorio y detección precisa del “tap” del usuario.  
-2. Evitar que el usuario haga *trampa* tocando antes del cambio de color.  
-3. Diseño atractivo y minimalista para que el juego no se sienta demasiado básico.  
+### 7️⃣ Riesgos o desafíos iniciales  
+⚠️ **Posibles problemas a resolver:**  
+1. Manejar correctamente el tiempo aleatorio y la detección precisa del *tap*.  
+2. Evitar trampas (usuario tocando antes del cambio de color).  
+3. Mantener un diseño minimalista pero atractivo.  
 
 ---
 
-### 8.- Hitos de avance  
-**R.**  
-- **Hito 1**: Crear pantallas básicas (Activities + layouts) y navegación con Intents.  
-- **Hito 2**: Implementar lógica del juego (cambio de color aleatorio + captura de tiempo).  
-- **Hito 3**: Guardar y mostrar resultados en ranking usando `SharedPreferences`.  
+### 8️⃣ Hitos de avance  
+🏁 **Plan de desarrollo:**  
+- **Hito 1** → Crear pantallas básicas (Activities + layouts) y navegación con Intents.  
+- **Hito 2** → Implementar la lógica del juego (cambio de color aleatorio + captura de tiempo).  
+- **Hito 3** → Guardar y mostrar resultados en ranking con `SharedPreferences`.  
+
+---
+
+🚀 **Estado actual:** Diseño en planificación.  
+📅 **Próximo paso:** Implementación de Activities y navegación con Intents.  
 
 ---
