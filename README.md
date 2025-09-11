@@ -28,9 +28,10 @@ El reto es **tocar la pantalla lo más rápido posible** cuando cambie de color.
 
 ### 3️⃣ Pantallas iniciales (Activities)  
 📲 **Listado de pantallas:**  
-1. **Pantalla de Inicio** → Botón para empezar a jugar y ver puntajes anteriores.  
+1. **Pantalla de Inicio** → Botón para empezar a jugar y colocar nombre.  
 2. **Pantalla de Juego** → Fondo cambia de color en un tiempo aleatorio → el usuario debe tocar rápido.  
-3. **Pantalla de Resultados** → Muestra el tiempo de reacción y ranking de mejores tiempos.  
+3. **Pantalla de Resultados** → Muestra el tiempo de reacción.
+4. **Pantalla de Top** → Muestra los 10 mejores tiempos.  
 
 ---
 
