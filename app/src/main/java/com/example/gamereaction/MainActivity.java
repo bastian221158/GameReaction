@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Comenzando Juego",Toast.LENGTH_SHORT).show();
                 EditText nombreJugadorEdit = findViewById(R.id.nombreJugador);
                 String nombreJugador = nombreJugadorEdit.getText().toString();
 
