@@ -1,5 +1,6 @@
 package com.example.gamereaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,28 +14,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pantalla_juego);
+        TextView nombreJugadortxt = findViewById(R.id.nombreJugadortxt);
+        String nombreJugador = getIntent().getStringExtra("nombrejugador");
+        nombreJugadortxt.setText(nombreJugador);
 
-        Button startBtn = findViewById(R.id.startBoton);
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText nombreJugadorEdit = findViewById(R.id.nombreJugador);
-                String nombreJugador = nombreJugadorEdit.getText().toString();
-
-                Intent inicio = new Intent(MainActivity.this, SecondActivity.class);
-                inicio.putExtra("nombrejugador", nombreJugador);
-                startActivity(inicio);
-            }
-        });
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.inicio), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
