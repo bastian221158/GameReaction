@@ -2,13 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/inicio"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/fondo_gradiente2">
 
-    <TextView
-        android:id="@+id/nombreJugadortxt"
+    <LinearLayout
+        android:id="@+id/contenedorJugador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugador"
-        android:textSize="18sp" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/contenedor_exotico">
 
+        <TextView
+            android:id="@+id/nombreJugadortxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/areaJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esperando señal..."
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/ubicacionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localizando ciudad..."
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 </RelativeLayout>

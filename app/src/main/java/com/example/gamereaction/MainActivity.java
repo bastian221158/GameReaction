@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Comenzando Juego",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Comenzando Juego", Toast.LENGTH_SHORT).show();
                 EditText nombreJugadorEdit = findViewById(R.id.nombreJugador);
                 String nombreJugador = nombreJugadorEdit.getText().toString();
 
